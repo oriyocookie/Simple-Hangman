@@ -30,7 +30,10 @@ class Hangman():
         usedLetters=""
         wordList=open("word.txt", "r")
         word=random.choice(wordList.read().split(','))
-        progress= ["_","_","_","_","_"]
+        progress=[]
+        progress.extend(word)
+        for i in range(0,len(progress)):
+            progress[i]="_"
         while attempts <6:
             guess=str(input("Guess a letter: "))
             if guess in word:
@@ -109,6 +112,7 @@ class Hangman():
             print("|     / \    |")
             print("|____________|")
             print("YOU DIED")
+            print ("the answer was "+ word)
             print("few days later Logan Paul found your dead body and filmed it")
             self.choice()
 
