@@ -112,7 +112,6 @@ class Hangman():
             print("|     / \    |")
             print("|____________|")
             print("YOU DIED")
-            print ("the answer was "+ word)
             print("few days later Logan Paul found your dead body and filmed it")
             self.choice()
 
